@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+import random
+import colors as c
+
+print('''
+Welcome my friend, to the MAGIC EIGHT BALL!
+What is your name?
+''')
+
+name = input('--> ')
+
+answers = [
+    c.green + 'Yes.' + c.reset,
+    c.red + 'No.' + c.reset,
+    c.magenta + 'Maybe.' + c.reset,
+    'Ask again later.',
+    'I dont think you want to know the answer to that question.',
+    'sorry, what did you say.',
+    'Are you sure you want to know that.',
+    c.red + 'Ok, you are asking too many questions. It is getting anoying.' + c.reset,
+    c.red + 'I can not answer as you will fall into a pit full of velosoraptors later today.' + c.reset,
+    'sure whatever.',
+    'Not gonna happen mate.',
+    'God forbid.',
+    c.green + 'I can not answer but tomorrow you shall become a wizard.' + c.reset,
+    c.red + 'THE KILLER BUNNY WILL ATTACK SOON WITH HIS ARMY OF CUTE LITTLE BUNNY RABITS!!! BE WARE!!!' + c.reset,
+    'I dont feel like answering you today' + name + ', sorry.',
+    c.red + 'You really need to get off the computer and GO OUTSIDE!!!' + c.reset,
+    'That depends, how many potatos do you have. If less then 64 then maybe, If more than 64 then no, and if you have exactly 64 then curtainly yes.',
+    c.red + 'Leave me alone.' + c.reset,
+    c.red + 'Get off my lawn.' + c.reset,
+    c.red + 'ask siri and PLEASE leave me alone.' + c.reset,
+    c.green + 'You are a wizard ' + name + '''. Here are you tickets for the Hogwarts Express, it is on platform 9 3/4. 
+    _______________________________
+    |                             |
+    | Name: Unknown               |  
+    | Platform: 9 3/4             |
+    | Train: Hogwarts Express     |
+    | Destination: Hogwarts school|
+    | of witch craft and wizardry |
+    |                             |
+    |_____________________________|'''
+    ]
+
+while True:
+    
+    question = input('> ')
+    answer = random.choice(answers)
+    print(answer)
