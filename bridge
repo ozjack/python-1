@@ -38,5 +38,8 @@ if name == 'king arthur':
     speed = prompt(c.green + 'What is the air speed velocity of an unladen swallow?')
     if speed == '24 mph':
         live()
+    elif 'african or european' in answer:
+        print('(The Bridge Keeper is cast into The Gorge Of Etrnal Peril.)')
+        live()
     else:
         die()
