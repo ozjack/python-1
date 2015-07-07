@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import pink as quiz
+import jurassic as quiz
 import colors as c
 import random
 
