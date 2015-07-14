@@ -1,29 +1,32 @@
 #!/usr/bin/env python3
 
 import colors as c
+from utils import ask
 
 text = '''
-You are and soldier and your team members are heading out to war, you go with then. 
-you all get in the {army_vehicle} , it blows up in your face, you are the only
-survivor. your best friend, {name1} , was killed. you {way_of_moving} to the nearest
-cover, the air around you is filled with gunfire. you are hit in the {bod6y_part} .
-you scramble out of your cover just before it is hit with an RPG. you look up and see
-an enemy with a name tag saying {name2} . the soldier shoots you in the face.
-YOUR DEAD.
+You are a soldier and your team members are heading out to war, you go with
+them. you all get in the {army vehicle} , it blows up in your face, you are the
+only survivor. your best friend, {name1} , was killed. you {way of moving} to
+the nearest cover, the air around you is filled with gunfire. you are hit in
+the {body part} . you scramble out of your cover just before it is hit with an
+RPG. you look up and see an enemy with a name tag saying {name2} . the soldier
+shoots you in the face.
+YOU DEAD.
 '''
 
 words = {
-    "army_vehacle" : {},
-    "name1" : {},
-    "way_of_moving" : {},
-    "body_part" : {},
-    "name2" : {}
+    "army vehicle" : None,
+    "name1" : None,
+    "way of moving" : None,
+    "body part" : None,
+    "name2" : None,
     }
 
 print(c.clear + '''
 Welcome to madlibs, enter your answers.
 ''')
 
-answer = {}
-for key in words:
-    print('would get an answer for ' + key )
+for keyword in words:
+    words[keyword] = ask(keyword.title().rstrip('0123456789') + ': ')
+
+print(c.clear + text.format(**words))
