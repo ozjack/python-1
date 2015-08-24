@@ -2,7 +2,7 @@
 import random
 import colors as c
 
-print('''
+print(c.clear + '''
 Welcome my friend, to the MAGIC EIGHT BALL!
 What is your name?
 ''')
