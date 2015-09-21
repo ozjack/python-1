@@ -4,30 +4,40 @@ import colors as c
 
 import random as r
 
-print(c.magenta + 'Welcome to the magic eight ball!')
+print(c.clear + c.magenta + 'Welcome to the magic eight ball!')
 print(c.magenta + 'Please type your question below:')
 
 answers = ['yes',
 'no' ,
 'maybe' ,
-'get off my lawn' ,
-'leave me alone and ask siri' ,
-'herobrine is the minecraft god of death' ,
 'definately' ,
 'my soarces say no' ,
-'reply hazy ask again' ,
-'stay in the adult state' ,
-'surface whats not sand' ,
-'ask what else' ,
-'you are the boss' ,
-'ask again later' ,
 'without a doubt' ,
 'you really dont want to know' ,
-'meh' ,
-'eat chocolate and ask again later']
+':|' ,
+':@ NO WAY' ,
+':P lol' ,
+':D good question ask again' ,
+'( ͡° ͜ʖ ͡°) my name is lenny face and I like trains'
+' ¯\_(ツ)_/¯ I dont know'
+'ಠ_ಠ thats a no brainer and the answer is no']
 
-input(c.red + '> ' + c.green + ' ')
+try:
 
-answer = random.choice(answers)
+    while True:
+        question = input(c.red + '> ' + c.green + ' ')
 
-print(answer)
+        if 'Brooke' in question:
+            print(c.red + 'ಠ_ಠ no way' + c.x)
+
+        elif 'I' in question:
+            print(c.green + 'definately :D')
+
+
+        else:
+            answer = r.choice(answers)
+            print(answer)
+
+except KeyboardInterrupt:
+    print(c.orange + '         See Ya :-D  DERPY DERP')
+    exit()
