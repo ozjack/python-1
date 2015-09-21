@@ -18,8 +18,8 @@ answers = ['yes',
 ':@ NO WAY' ,
 ':P lol' ,
 ':D good question ask again' ,
-'( ͡° ͜ʖ ͡°) my name is lenny face and I like trains'
-' ¯\_(ツ)_/¯ I dont know'
+'( ͡° ͜ʖ ͡°) my name is lenny face and I like trains' ,
+' ¯\_(ツ)_/¯ I dont know' ,
 'ಠ_ಠ thats a no brainer and the answer is no']
 
 try:
